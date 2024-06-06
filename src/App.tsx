@@ -3,14 +3,14 @@
  * See LICENSE.md in the project root for license terms and full copyright notice.
  *--------------------------------------------------------------------------------------------*/
 
-import MyCustomButton from "./MyCustomButton";
+//import MyCustomButton from "./MyCustomButton";
 import { MappingData } from "./Button2";
 import "./App.scss";
 import { GroupingMappingProvider } from "@itwin/grouping-mapping-widget";
 //import { MappingsClient } from "@itwin/insights-client";
 import type { ScreenViewport } from "@itwin/core-frontend";
 import { FitViewTool, IModelApp, StandardViewId } from "@itwin/core-frontend";
-import { CheckListBox, FillCentered } from "@itwin/core-react";
+import { FillCentered } from "@itwin/core-react";
 import { ProgressLinear, toaster } from "@itwin/itwinui-react";
 import {
   MeasurementActionToolbar,
@@ -62,8 +62,8 @@ const App: React.FC = () => {
   );
   const [mappingData, setMappingData] = useState<MappingData[]>([]);
   const [mappingId, setMappingId] = useState("");
-  const [reportId, setReportId] = useState("");
-  const [jobId, setJobId] = useState("");
+  // const [reportId, setReportId] = useState("");
+  // const [jobId, setJobId] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const reportNameRef = useRef<HTMLInputElement | null>(null);
   const apiDateRef = useRef<HTMLInputElement | null>(null);
@@ -225,7 +225,7 @@ const App: React.FC = () => {
       );
       const reportID = await response.json();
       console.log("report id is ", reportID.report.id);
-      setReportId(reportID.report.id);
+      //setReportId(reportID.report.id);
 
       if (response.ok) {
         toaster.positive("Report created successfully...");
@@ -269,7 +269,7 @@ const App: React.FC = () => {
                 toaster.positive("Extraction successfull...");
                 const jobID = await response3.json();
                 console.log("job id is ", jobID.run.id);
-                setJobId(jobID.run.id);
+                //setJobId(jobID.run.id);
                 // toaster.informational(
                 //   `Your URL is ready -  https://api.bentley.com/insights/reporting/odata/${reportID.report.id}`,
                 //   {
@@ -297,7 +297,7 @@ const App: React.FC = () => {
                   if (date) {
                     const currentDate = new Date();
                     //if the date is current date
-                    if (date == currentDate.toISOString().slice(0, 10)) {
+                    if (date === currentDate.toISOString().slice(0, 10)) {
                       currentDate.setDate(currentDate.getDate() + 1);
                       date = currentDate.toISOString().slice(0, 10);
                     }

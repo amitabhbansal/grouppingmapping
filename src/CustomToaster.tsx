@@ -1,6 +1,6 @@
 import React from "react";
 import { toaster, Button } from "@itwin/itwinui-react";
-import CopyIcon from "./CopyIcon";
+//import CopyIcon from "./CopyIcon";
 
 interface CustomToasterProps {
   title: string;

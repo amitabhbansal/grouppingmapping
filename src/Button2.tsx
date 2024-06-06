@@ -7,9 +7,9 @@ import {
 } from "@itwin/appui-react";
 import abc from "./power-bi.svg";
 import key from "./icons8-key.svg";
-import { exec } from "child_process";
-import { useState } from "react";
-import { AnyArrayProperty } from "@itwin/ecschema-metadata";
+// import { exec } from "child_process";
+// import { useState } from "react";
+// import { AnyArrayProperty } from "@itwin/ecschema-metadata";
 export interface MappingData {
   id: string;
   mappingName: string;
