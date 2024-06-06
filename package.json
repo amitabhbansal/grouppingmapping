@@ -21,14 +21,19 @@
     "@itwin/core-react": "^4.11.0",
     "@itwin/core-telemetry": "^4.3.5",
     "@itwin/ecschema-metadata": "^4.3.5",
+    "@itwin/grouping-mapping-widget": "^0.24.0",
     "@itwin/imodel-components-react": "^4.11.0",
     "@itwin/imodels-access-frontend": "^4.1.6",
+    "@itwin/imodels-client-management": "^4.4.0",
+    "@itwin/insights-client": "^0.7.0",
+    "@itwin/itwinui-icons-react": "^2.8.0",
     "@itwin/itwinui-react": "^2.12.26",
     "@itwin/measure-tools-react": "^0.13.0",
     "@itwin/presentation-common": "^4.3.5",
     "@itwin/presentation-components": "^4.4.0",
     "@itwin/presentation-frontend": "^4.3.5",
     "@itwin/property-grid-react": "^1.6.0",
+    "@itwin/reports-config-widget-react": "^0.5.0",
     "@itwin/tree-widget-react": "^1.2.2",
     "@itwin/web-viewer-react": "^4.2.4",
     "@itwin/webgl-compatibility": "^4.3.5",
@@ -45,9 +50,9 @@
     "typescript": "~5.0.2"
   },
   "scripts": {
-    "start": "react-scripts --max_old_space_size=4096 start",
-    "build": "react-scripts --max_old_space_size=4096 build",
-    "test": "react-scripts --max_old_space_size=4096 test",
+    "start": "react-scripts start",
+    "build": "react-scripts  build",
+    "test": "react-scripts  test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
